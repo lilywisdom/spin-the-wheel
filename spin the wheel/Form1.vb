@@ -1,69 +1,132 @@
-﻿Public Class frmMain
-    Dim Number As Integer
-    Dim Random As Decimal
-    Dim Number2 As Integer
-    Private Sub btnSpin_Click(sender As Object, e As EventArgs) Handles btnSpin.Click
-        TimerSpin.Enabled = True
+﻿' Name: Spin the Wheel
+' Purpose: Spins wheel
+' Programmer: Lily Woodworth Wisdom on 4/30/23
 
+Option Strict On
+Option Infer Off
+Option Explicit On
+
+
+Public Class frmMain
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        picWheel.Image = My.Resources.spin_0
     End Sub
+    Private Sub btnStop_Click(sender As Object, e As EventArgs) Handles btnStop.Click
+        Dim MyValue As Integer
+        MyValue = CInt(Int((26 * Rnd()) + 1))
 
-    Private Sub TimerSpin_Tick(sender As Object, e As EventArgs) Handles TimerSpin.Tick
-        Number += 1
-        Number2 += 1
 
-        If Number = 1 Then
+        If MyValue = 1 Then
             picWheel.Image = My.Resources.spin_0
-        ElseIf Number = 2 Then
+        ElseIf MyValue = 2 Then
             picWheel.Image = My.Resources.spin_1
-        ElseIf Number = 3 Then
+        ElseIf MyValue = 3 Then
             picWheel.Image = My.Resources.spin_2
-        ElseIf Number = 4 Then
+        ElseIf MyValue = 4 Then
             picWheel.Image = My.Resources.spin_3
-        ElseIf Number = 5 Then
+        ElseIf MyValue = 5 Then
             picWheel.Image = My.Resources.spin_4
-        ElseIf Number = 6 Then
+        ElseIf MyValue = 6 Then
             picWheel.Image = My.Resources.spin_5
-        ElseIf Number = 7 Then
+        ElseIf MyValue = 7 Then
             picWheel.Image = My.Resources.spin_6
-        ElseIf Number = 8 Then
+        ElseIf MyValue = 8 Then
             picWheel.Image = My.Resources.spin_7
-        ElseIf Number = 9 Then
+        ElseIf MyValue = 9 Then
             picWheel.Image = My.Resources.spin_8
-        ElseIf Number = 10 Then
+        ElseIf MyValue = 10 Then
             picWheel.Image = My.Resources.spin_9
-        ElseIf Number = 11 Then
+        ElseIf MyValue = 11 Then
             picWheel.Image = My.Resources.spin_10
-        ElseIf Number = 12 Then
+        ElseIf MyValue = 12 Then
             picWheel.Image = My.Resources.spin_11
-        ElseIf Number = 13 Then
+        ElseIf MyValue = 13 Then
             picWheel.Image = My.Resources.spin_12
-        ElseIf Number = 14 Then
+        ElseIf MyValue = 14 Then
             picWheel.Image = My.Resources.spin_13
-        ElseIf Number = 15 Then
+        ElseIf MyValue = 15 Then
             picWheel.Image = My.Resources.spin_14
-        ElseIf Number = 16 Then
+        ElseIf MyValue = 16 Then
             picWheel.Image = My.Resources.spin_15
-        ElseIf Number = 17 Then
+        ElseIf MyValue = 17 Then
             picWheel.Image = My.Resources.spin_16
-        ElseIf Number = 18 Then
+        ElseIf MyValue = 18 Then
             picWheel.Image = My.Resources.spin_17
-        ElseIf Number = 19 Then
+        ElseIf MyValue = 19 Then
             picWheel.Image = My.Resources.spin_18
-        ElseIf Number = 20 Then
+        ElseIf MyValue = 20 Then
             picWheel.Image = My.Resources.spin_19
-        ElseIf Number = 21 Then
+        ElseIf MyValue = 21 Then
             picWheel.Image = My.Resources.spin_20
-        ElseIf Number = 22 Then
+        ElseIf MyValue = 22 Then
             picWheel.Image = My.Resources.spin_21
-        ElseIf Number = 23 Then
+        ElseIf MyValue = 23 Then
             picWheel.Image = My.Resources.spin_22
-        ElseIf Number = 24 Then
+        ElseIf MyValue = 24 Then
             picWheel.Image = My.Resources.spin_23
-        ElseIf Number = 25 Then
+        ElseIf MyValue = 25 Then
             picWheel.Image = My.Resources.spin_24
-        ElseIf Number = 26 Then
+        ElseIf MyValue = 26 Then
             picWheel.Image = My.Resources.spin_25
-
         End If
     End Sub
+    Private Async Sub btnSpin_Click(sender As Object, e As EventArgs) Handles btnSpin.Click
+        For intTimer As Integer = 1 To 10
+            picWheel.Image = My.Resources.spin_1
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_2
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_3
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_4
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_5
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_6
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_7
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_8
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_9
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_10
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_11
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_12
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_13
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_14
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_15
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_16
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_17
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_18
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_19
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_20
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_21
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_22
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_23
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_24
+            Await Task.Delay(20)
+            picWheel.Image = My.Resources.spin_25
+            Await Task.Delay(20)
+        Next
+    End Sub
+
+
+
 End Class
+
+
